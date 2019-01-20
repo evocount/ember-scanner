@@ -2,7 +2,7 @@
 
 ## Installation
 
-* `git clone <repository-url>`
+* `git clone git@github.com:evocount/ember-scanner.git`
 * `cd ember-scanner`
 * `npm install`
 

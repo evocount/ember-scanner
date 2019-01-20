@@ -23,13 +23,9 @@ class CodeScanner extends Component {
         if (this.onDevicesFound) {
           this.onDevicesFound(videoInputDevices);
         }
-        videoInputDevices.forEach(
-          device => console.log(`${device.label}, ${device.deviceId}`)
-        );
       }
     ).catch(
       error => {
-        console.log(error);
         if (this.onDevicesError) {
           this.onDevicesError(error);
         }
@@ -44,7 +40,6 @@ class CodeScanner extends Component {
   }
 
   startVideoScanning() {
-    console.log('starting to scan');
     this.codeReader.decodeFromInputVideoDevice(
       this.device,
       this.elementId
