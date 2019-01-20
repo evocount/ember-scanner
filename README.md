@@ -1,7 +1,7 @@
 ember-scanner
 ==============================================================================
 
-(QR) Code scanner for Ember based on [@zxing/library](https://github.com/zxing-js/library).
+(QR) Code scanner for Ember based on [@zxing/library](https://github.com/zxing-js/library). ([Demo](https://evocount.github.io/ember-scanner/))
 
 
 <!-- Compatibility
