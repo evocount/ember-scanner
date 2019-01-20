@@ -24,3 +24,10 @@ module.exports = {
     runCommand('git push origin gh-pages:gh-pages');
   },
 };
+
+
+function runCommand(command) {
+  console.log('Running: ' + command);
+  var output = execSync(command, { encoding: 'utf8' });
+  console.log(output);
+}
