@@ -33,6 +33,14 @@ class CodeScanner extends Component {
     )
   }
 
+  willDestroyElement() {
+    super.willDestroyElement(...arguments);
+
+    if (this.get('codeReader')) {
+      this.codeReader.reset();
+    }
+  }
+
   @observes('device')
   onDeviceChange() {
     this.codeReader.reset();
