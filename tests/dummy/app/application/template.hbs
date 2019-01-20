@@ -1,0 +1,24 @@
+<div class="main">
+  <h2 id="title"><a href="https://github.com/evocount/ember-scanner">Ember-scanner</a> Demo</h2>
+
+  {{!-- {{code-snippet name="code-scanner.hbs"}} --}}
+
+  <div>
+    <label for="device">Device:</label>
+    {{#power-select
+      options=devices
+      selected=device
+      onchange=(action (mut device))
+      searchEnabled=false as |item|}}
+      {{item.label}}
+    {{/power-select}}
+  </div>
+
+  {{code-scanner
+    device=device.deviceId
+    onScanSuccess=(action (mut result))
+    onDevicesFound=(action (mut devices))
+  }}
+
+  <p>Result: {{result.text}}</p>
+</div>
