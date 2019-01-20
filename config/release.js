@@ -18,16 +18,4 @@ module.exports = {
   //     // Do custom things here...
   //   });
   // }
-  afterPush: function(project, versions) {
-    runCommand('ember build --environment production');
-    runCommand('ember github-pages:commit --message "Released ' + versions.next + '"');
-    runCommand('git push origin gh-pages:gh-pages');
-  },
 };
-
-
-function runCommand(command) {
-  console.log('Running: ' + command);
-  var output = execSync(command, { encoding: 'utf8' });
-  console.log(output);
-}
