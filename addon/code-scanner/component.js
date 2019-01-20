@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { observes } from '@ember-decorators/object';
 import { classNames, layout, tagName } from '@ember-decorators/component';
-import { BrowserQRCodeReader } from '@zxing/library';
+import { BrowserMultiFormatReader } from '@zxing/library/esm5/browser/BrowserMultiFormatReader';
 import template from './template';
 
 @layout(template)
@@ -14,7 +14,7 @@ class CodeScanner extends Component {
   didInsertElement() {
     super.didInsertElement(...arguments);
 
-    this.set('codeReader', new BrowserQRCodeReader());
+    this.set('codeReader', new BrowserMultiFormatReader());
 
     this.startVideoScanning();
 

@@ -1,13 +1,14 @@
 {
   "name": "ember-scanner",
   "version": "0.1.0",
-  "description": "(QR) Code scanner for Ember.",
+  "description": "QR code and barcode scanner for Ember.",
   "keywords": [
     "ember-addon",
     "reader",
     "decode",
     "scanner",
     "qr-code",
+    "barcode",
     "zxing"
   ],
   "repository": {

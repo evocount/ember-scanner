@@ -1,14 +1,7 @@
 ember-scanner
 ==============================================================================
 
-(QR) Code scanner for Ember based on [@zxing/library](https://github.com/zxing-js/library). ([Demo](https://evocount.github.io/ember-scanner/))
-
-
-<!-- Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v2.18 or above
-* Ember CLI v2.13 or above -->
+QR code and barcode scanner for Ember based on [@zxing/library](https://github.com/zxing-js/library). ([Demo](https://evocount.github.io/ember-scanner/))
 
 
 Installation
@@ -43,11 +36,10 @@ or
 ```
 
 * `device`: Id of video-device (camera) to use for scanning (use one of the devices reported by `onDevicesFound` or `undefined` for automatic selection)
-* `onScanSuccess`: Reports scan results as object after valid QR code was scanned. Decoded message is in `text`
+* `onScanSuccess`: Reports scan results as object after valid code was scanned. Decoded message is in `text`
 * `onScanError`: In case error occurs during scanning
 * `onDevicesFound`: Reports list of available devices/cameras as objects with fields `label`, `deviceId`
 * `onDevicesError`: In case scan for devices fails
-*
 
 License
 ------------------------------------------------------------------------------
