@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { observes } from '@ember-decorators/object';
 import { classNames, layout, tagName } from '@ember-decorators/component';
-import { BrowserMultiFormatReader } from '@zxing/library/esm5/browser/BrowserMultiFormatReader';
+import { BrowserMultiFormatReader } from '@zxing/library';
 import template from './template';
 
 @layout(template)
