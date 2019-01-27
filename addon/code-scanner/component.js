@@ -1,7 +1,6 @@
 import Component from '@ember/component';
 import { observes } from '@ember-decorators/object';
 import { classNames, layout, tagName } from '@ember-decorators/component';
-import { BrowserMultiFormatReader } from '@zxing/library';
 import template from './template';
 
 @layout(template)
@@ -14,23 +13,27 @@ class CodeScanner extends Component {
   didInsertElement() {
     super.didInsertElement(...arguments);
 
-    this.set('codeReader', new BrowserMultiFormatReader());
+    import('@zxing/library').then(
+      module => {
+        this.set('codeReader', new module.BrowserMultiFormatReader());
 
-    this.startVideoScanning();
+        this.startVideoScanning();
 
-    this.codeReader.getVideoInputDevices().then(
-      videoInputDevices => {
-        if (this.onDevicesFound) {
-          this.onDevicesFound(videoInputDevices);
-        }
+        this.codeReader.getVideoInputDevices().then(
+          videoInputDevices => {
+            if (this.onDevicesFound) {
+              this.onDevicesFound(videoInputDevices);
+            }
+          }
+        ).catch(
+          error => {
+            if (this.onDevicesError) {
+              this.onDevicesError(error);
+            }
+          }
+        )
       }
-    ).catch(
-      error => {
-        if (this.onDevicesError) {
-          this.onDevicesError(error);
-        }
-      }
-    )
+    );
   }
 
   willDestroyElement() {
