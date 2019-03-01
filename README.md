@@ -41,6 +41,12 @@ or
 * `onDevicesFound`: Reports list of available devices/cameras as objects with fields `label`, `deviceId`
 * `onDevicesError`: In case scan for devices fails
 
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
 License
 ------------------------------------------------------------------------------
 
