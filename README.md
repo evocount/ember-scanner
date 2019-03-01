@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/ember-scanner.svg)](https://badge.fury.io/js/ember-scanner)
+
 ember-scanner
 ==============================================================================
 
