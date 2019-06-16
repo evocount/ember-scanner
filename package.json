@@ -39,6 +39,8 @@
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
+    "acorn": "^6.1.1",
+    "ajv": "^6.10.0",
     "babel-eslint": "^10.0.1",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.10.1",
@@ -61,6 +63,7 @@
     "ember-source": "~3.10.1",
     "ember-source-channel-url": "^2.0.1",
     "ember-try": "^1.2.1",
+    "eslint": "^5.16.0",
     "eslint-plugin-ember": "^6.5.1",
     "eslint-plugin-node": "^9.1.0",
     "loader.js": "^4.7.0",
