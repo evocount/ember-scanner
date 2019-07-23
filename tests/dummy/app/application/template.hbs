@@ -5,20 +5,22 @@
 
   <div>
     <label for="device">Device:</label>
-    {{#power-select
-      options=devices
-      selected=device
-      onchange=(action (mut device))
-      searchEnabled=false as |item|}}
+    <PowerSelect
+      @options={{devices}}
+      @selected={{device}}
+      @onChange={{action (mut device)}}
+      @searchEnabled={{false}}
+      as |item|
+    >
       {{item.label}}
-    {{/power-select}}
+    </PowerSelect>
   </div>
 
-  {{code-scanner
-    device=device.deviceId
-    onScanSuccess=(action (mut result))
-    onDevicesFound=(action (mut devices))
-  }}
+  <CodeScanner
+    @device={{device.deviceId}}
+    @onScanSuccess={{action (mut result)}}
+    @onDevicesFound={{action (mut devices)}}
+  />
 
   <p>Result: {{result.text}}</p>
 </div>

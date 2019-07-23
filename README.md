@@ -18,9 +18,9 @@ Usage
 ------------------------------------------------------------------------------
 
 ```hbs
-{{code-scanner
-  onScanSuccess=(action (mut result))
-}}
+<CodeScanner
+  @onScanSuccess={{action (mut result)}}
+/>
 
 Result: {{result.text}}
 ```
@@ -28,13 +28,13 @@ Result: {{result.text}}
 or
 
 ```hbs
-{{code-scanner
-  device=camera
-  onScanSuccess=(action 'onScanSuccess')
-  onScanError=(action 'onScanError')
-  onDevicesFound=(action 'onCamerasFound')
-  onDevicesError=(action 'onCamerasError')
-}}
+<CodeScanner
+  @device={{camera}}
+  @onScanSuccess={{action "onScanSuccess"}}
+  @onScanError={{action "onScanError"}}
+  @onDevicesFound={{action "onCamerasFound"}}
+  @onDevicesError={{action "onCamerasError"}}
+/>
 ```
 
 * `device`: Id of video-device (camera) to use for scanning (use one of the devices reported by `onDevicesFound` or `undefined` for automatic selection)
