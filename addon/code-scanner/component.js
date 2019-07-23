@@ -51,20 +51,17 @@ class CodeScanner extends Component {
   }
 
   startVideoScanning() {
-    console.log("start video scanning");
     this.codeReader.decodeFromInputVideoDevice(
       this.device,
       this.elementId
     ).then(
       result => {
-        console.log("got: " + result);
         if (this.onScanSuccess) {
           this.onScanSuccess(result);
         }
       }
     ).catch(
       error => {
-        console.log("got error: " + error);
         if (this.onScanError) {
           this.onScanError(error);
         }
