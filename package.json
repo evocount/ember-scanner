@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
-    "acorn": "^6.2.1",
+    "acorn": "^7.0.0",
     "ajv": "^6.10.2",
     "babel-eslint": "^10.0.2",
     "broccoli-asset-rev": "^3.0.0",
