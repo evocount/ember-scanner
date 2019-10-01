@@ -1,6 +1,6 @@
 {
   "name": "ember-scanner",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "QR code and barcode scanner for Ember.",
   "keywords": [
     "ember-addon",
