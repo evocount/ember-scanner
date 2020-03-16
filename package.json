@@ -31,7 +31,7 @@
     "deploy:demo": "ember build --environment production && ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages"
   },
   "dependencies": {
-    "@zxing/library": "^0.15.2",
+    "@zxing/library": "^0.16.0",
     "ember-auto-import": "^1.5.3",
     "ember-cli-babel": "^7.13.2",
     "ember-cli-htmlbars": "^4.2.0",
