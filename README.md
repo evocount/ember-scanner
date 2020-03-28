@@ -19,21 +19,21 @@ Usage
 
 ```hbs
 <CodeScanner
-  @onScanSuccess={{action (mut result)}}
+  @onScanSuccess={{fn (mut this.result)}}
 />
 
-Result: {{result.text}}
+Result: {{this.result.text}}
 ```
 
 or
 
 ```hbs
 <CodeScanner
-  @device={{camera}}
-  @onScanSuccess={{action "onScanSuccess"}}
-  @onScanError={{action "onScanError"}}
-  @onDevicesFound={{action "onCamerasFound"}}
-  @onDevicesError={{action "onCamerasError"}}
+  @device={{this.camera}}
+  @onScanSuccess={{fn this.onScanSuccess}}
+  @onScanError={{fn this.onScanError}}
+  @onDevicesFound={{fn this.onCamerasFound}}
+  @onDevicesError={{fn this.onCamerasError}}
 />
 ```
 

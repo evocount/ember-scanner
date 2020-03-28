@@ -1,26 +1,31 @@
 <div class="main">
-  <h2 id="title"><a href="https://github.com/evocount/ember-scanner">Ember-scanner</a> Demo</h2>
-
+  <h2 id="title">
+    <a href="https://github.com/evocount/ember-scanner">
+      Ember-scanner
+    </a>
+    Demo
+  </h2>
   {{!-- {{code-snippet name="code-scanner.hbs"}} --}}
-
   <div>
-    <label for="device">Device:</label>
+    <label for="device">
+      Device:
+    </label>
     <PowerSelect
-      @options={{devices}}
-      @selected={{device}}
-      @onChange={{action (mut device)}}
-      @searchEnabled={{false}}
-      as |item|
+      @options={{this.devices}}
+      @selected={{this.device}}
+      @onChange={{fn (mut this.device)}}
+      @searchEnabled={{false}} as |item|
     >
       {{item.label}}
     </PowerSelect>
   </div>
-
   <CodeScanner
-    @device={{device.deviceId}}
-    @onScanSuccess={{action (mut result)}}
-    @onDevicesFound={{action (mut devices)}}
+    @device={{this.device.deviceId}}
+    @onScanSuccess={{fn (mut this.result)}}
+    @onDevicesFound={{fn (mut this.devices)}}
   />
-
-  <p>Result: {{result.text}}</p>
+  <p>
+    Result:
+    {{this.result.text}}
+  </p>
 </div>
