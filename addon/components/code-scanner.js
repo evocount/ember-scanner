@@ -15,6 +15,7 @@ class CodeScanner extends Component {
 
     import('@zxing/library').then(
       module => {
+        if (this.isDestroyed) return;
         this.set('codeReader', new module.BrowserMultiFormatReader());
 
         this.startVideoScanning();
@@ -56,12 +57,14 @@ class CodeScanner extends Component {
       this.elementId
     ).then(
       result => {
+        if (this.isDestroyed) return;
         if (this.onScanSuccess) {
           this.onScanSuccess(result);
         }
       }
     ).catch(
       error => {
+        if (this.isDestroyed) return;
         if (this.onScanError) {
           this.onScanError(error);
         }
