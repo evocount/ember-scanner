@@ -40,11 +40,12 @@ class CodeScanner extends Component {
   willDestroyElement() {
     super.willDestroyElement(...arguments);
 
-    if (this.get('codeReader')) {
+    if (this.codeReader) {
       this.codeReader.reset();
     }
   }
 
+  // eslint-disable-next-line ember/no-observers
   @observes('device')
   onDeviceChange() {
     this.codeReader.reset();
