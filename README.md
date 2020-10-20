@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/evocount/ember-scanner.svg?branch=master)](https://travis-ci.org/evocount/ember-scanner)
 [![npm version](https://badge.fury.io/js/ember-scanner.svg)](https://badge.fury.io/js/ember-scanner)
 
 ember-scanner
