@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { observes } from '@ember-decorators/object';
 import { classNames, layout, tagName } from '@ember-decorators/component';
-import template from './template';
+import template from '../templates/code-scanner';
 
 @layout(template)
 @tagName('video')
