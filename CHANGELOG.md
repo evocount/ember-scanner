@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 – …
 
+## [0.3.7] - 2020-10-20
+### Changed
+- Dependency updates
+
+### Fixed
+- Guard against set on destroyed errors
+- Moving files to better support Embroider
+
 ## [0.3.6] - 2019-12-03
 ### Changed
 - Dependency updates
